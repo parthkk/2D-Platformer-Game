@@ -1,0 +1,22 @@
+class Bounce extends Block{
+  Bounce(int x, int y,int width,int height,int boxWidth, int boxHeight, int type){
+    super(x,y,width,height,boxWidth,boxHeight,type);
+  }
+  public void useAbility(Player player){
+    player.moveUp(35);
+  }
+  public void useAbilityRight(Player player){
+    player.left = false;
+    player.moveUp(20);
+    player.setMovementSpeed(15);
+    player.right = true;
+    player.setBounced(true);
+  }
+  public void useAbilityLeft(Player player){
+    player.right = false;
+    player.moveUp(20);
+    player.setMovementSpeed(20);
+    player.left = true;
+    player.setBounced(true);
+  }
+}

@@ -1,0 +1,6 @@
+class Cloud extends Block{
+  Cloud(int x, int y,int width,int height,int boxWidth, int boxHeight, int type){
+    super(x,y,width,height,boxWidth,boxHeight,type);
+    this.setHitBox(x+6,y+19,width,height-100);
+  }
+}

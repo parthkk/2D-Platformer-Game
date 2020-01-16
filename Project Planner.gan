@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="ISU Planning " company="Brickoz" webLink="http://" view-date="2018-12-09" view-index="0" gantt-divider-location="465" resource-divider-location="300" version="2.7.2" locale="en_CA">
+    <description><![CDATA[Project Planner for Grade 11 Computer Science Final Project.]]></description>
+    <view zooming-state="default:0" id="gantt-chart">
+        <field id="tpd3" name="Name" width="50" order="0"/>
+        <field id="tpd4" name="Begin date" width="24" order="1"/>
+        <field id="tpd5" name="End date" width="24" order="2"/>
+        <option id="color.recent"><![CDATA[#000000 #cccccc #ffffff #003399 #00ffcc #00cccc #ff66ff #99ff99 #00cc33 #9999ff]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="50" order="0"/>
+        <field id="1" name="Default role" width="50" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="true"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="1" name="Plan basic game components" color="#000000" meeting="false" start="2018-12-13" duration="5" complete="0" expand="true">
+            <depend id="251" type="2" difference="0" hardness="Strong"/>
+            <task id="4" name="Identify Classes" color="#000099" meeting="false" start="2018-12-13" duration="1" complete="0" expand="true">
+                <depend id="5" type="2" difference="0" hardness="Strong"/>
+                <depend id="75" type="2" difference="0" hardness="Strong"/>
+                <task id="8" name="Player Class" color="#0000ff" meeting="false" start="2018-12-13" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[Creates the object of a player.
+Each player will have a "weapon" object
+extends characters
+implements gravity
+implements moveable]]></notes>
+                </task>
+                <task id="9" name="Enemy Classes" color="#0000ff" meeting="false" start="2018-12-13" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[Creates the object of an enemy
+Each enemy holds a "weapon" object
+abstract class
+extends characters]]></notes>
+                    <task id="19" name="Melee Enemy" color="#9999ff" meeting="false" start="2018-12-13" duration="1" complete="0" expand="true">
+                        <notes><![CDATA[Enemies that can attack you
+Enemies that can steal your gems
+extends enemy
+implements gravity
+implements moveable]]></notes>
+                    </task>
+                    <task id="24" name="Projectile Enemy" color="#9999ff" meeting="false" start="2018-12-13" duration="1" complete="0" expand="true">
+                        <notes><![CDATA[Projectile enemies have the same weapons as players.
+Weapon is chosen randomly.
+extends enemy
+implements gravity
+implements moveable]]></notes>
+                    </task>
+                </task>
+                <task id="12" name="Weapon Classes" color="#0000ff" meeting="false" start="2018-12-13" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[list of different weapons that players/enemies can carry
+]]></notes>
+                    <task id="42" name="Boomerang" color="#9999ff" meeting="false" start="2018-12-13" duration="1" complete="0" expand="true">
+                        <notes><![CDATA[A throwable weapon that will return to the thrower unless it comes into contact with an object
+extends weapon
+implements gravity]]></notes>
+                    </task>
+                    <task id="44" name="Acid Ball" color="#9999ff" meeting="false" start="2018-12-13" duration="1" complete="0" expand="true">
+                        <notes><![CDATA[A throwable weapon that hovers and damages opponents it contacts
+extends weapon
+implements gravity]]></notes>
+                    </task>
+                    <task id="46" name="Lightning Ball" color="#9999ff" meeting="false" start="2018-12-13" duration="1" complete="0" expand="true">
+                        <notes><![CDATA[A throwable weapon that hovers and pushes back opponents that it contacts
+Does not apply damage
+extends weapon
+implements gravity]]></notes>
+                    </task>
+                    <task id="48" name="Explosives" color="#9999ff" meeting="false" start="2018-12-13" duration="1" complete="0" expand="true">
+                        <notes><![CDATA[A throwable weapon that damges units around a certain area and explodes after it comes into contact with any object
+extends weapon
+implements gravity]]></notes>
+                    </task>
+                </task>
+                <task id="40" name="Collectable Classes" color="#0000ff" meeting="false" start="2018-12-13" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[List of things that players can pick up to earn points.
+abstract class
+]]></notes>
+                    <task id="49" name="Gems" color="#9999ff" meeting="false" start="2018-12-13" duration="1" complete="0" expand="true">
+                        <notes><![CDATA[Will spawn a certain amount on each level
+The players must aim to collect as many gems as possible
+They will provide points
+extends collectable]]></notes>
+                    </task>
+                    <task id="55" name="Stars" color="#9999ff" meeting="false" start="2018-12-13" duration="1" complete="0" expand="true">
+                        <notes><![CDATA[Allow players to earn extra points if they are collected
+They are more rare
+extend collectable]]></notes>
+                    </task>
+                </task>
+                <task id="41" name="Block Classes" color="#0000ff" meeting="false" start="2018-12-13" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[List of different platforms that the players and enemies can interact with
+extends items]]></notes>
+                    <task id="59" name="Cloud Block" color="#9999ff" meeting="false" start="2018-12-13" duration="1" complete="0" expand="true">
+                        <notes><![CDATA[You can walk through the sides and bottom of the block
+extends block]]></notes>
+                    </task>
+                    <task id="61" name="Dissapearing Block" color="#9999ff" meeting="false" start="2018-12-13" duration="1" complete="0" expand="true">
+                        <notes><![CDATA[Dissapears after a player stands on it.
+extends block]]></notes>
+                    </task>
+                    <task id="63" name="Moving Block" color="#9999ff" meeting="false" start="2018-12-13" duration="1" complete="0" expand="true">
+                        <notes><![CDATA[Moves on it's own either vertically or horizontally
+extends block]]></notes>
+                    </task>
+                    <task id="65" name="Moveable Block" color="#9999ff" meeting="false" start="2018-12-13" duration="1" complete="0" expand="true">
+                        <notes><![CDATA[Can be moved around by players.
+extends block]]></notes>
+                    </task>
+                    <task id="178" name="Laser Block" color="#9999ff" meeting="false" start="2018-12-13" duration="1" complete="0" expand="true">
+                        <notes><![CDATA[Shoots a laser vertically that kills both players and enemies
+extends block]]></notes>
+                    </task>
+                    <task id="67" name="Bounce Block" color="#9999ff" meeting="false" start="2018-12-13" duration="1" complete="0" expand="true">
+                        <notes><![CDATA[Bounces players up when they are stood on
+extends block]]></notes>
+                    </task>
+                    <task id="69" name="Slow/Slime Block" color="#9999ff" meeting="false" start="2018-12-13" duration="1" complete="0" expand="true">
+                        <notes><![CDATA[Slows player movement speed down.
+extends block]]></notes>
+                    </task>
+                    <task id="71" name="Water/Acid Block" color="#9999ff" meeting="false" start="2018-12-13" duration="1" complete="0" expand="true">
+                        <notes><![CDATA[Kills player/enemy.
+extends block]]></notes>
+                    </task>
+                </task>
+            </task>
+            <task id="75" name="Identify Interfaces" color="#990000" meeting="false" start="2018-12-14" duration="1" complete="0" expand="true">
+                <notes><![CDATA[List of interactions that will be implemnted by different classes
+]]></notes>
+                <task id="81" name="Gravity" color="#ff0000" meeting="false" start="2018-12-14" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[Constant downward force]]></notes>
+                </task>
+                <task id="87" name="Moveable" color="#ff0000" meeting="false" start="2018-12-14" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[Allows users and enemies to move around]]></notes>
+                    <task id="123" name="Move Left" color="#ff6666" meeting="false" start="2018-12-14" duration="1" complete="0" expand="true">
+                        <notes><![CDATA[decrease x co-ordinate]]></notes>
+                    </task>
+                    <task id="127" name="Move Rightt" color="#ff6666" meeting="false" start="2018-12-14" duration="1" complete="0" expand="true">
+                        <notes><![CDATA[increase x co-ordinate]]></notes>
+                    </task>
+                    <task id="129" name="Jump" color="#ff6666" meeting="false" start="2018-12-14" duration="1" complete="0" expand="true">
+                        <notes><![CDATA[increase y co-ordinate]]></notes>
+                    </task>
+                </task>
+            </task>
+            <task id="5" name="Identify Methods" color="#006633" meeting="false" start="2018-12-15" duration="2" complete="0" expand="true">
+                <notes><![CDATA[Identify things that different classes can do]]></notes>
+                <task id="96" name="Player Methods" color="#00cc33" meeting="false" start="2018-12-15" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[List of things players can do]]></notes>
+                    <task id="98" name="Pick up item" color="#99ff99" meeting="false" start="2018-12-15" duration="1" complete="0" expand="true">
+                        <notes><![CDATA[Collect items/collectable when player hitbox collides with item hitbox]]></notes>
+                    </task>
+                    <task id="104" name="Attack" color="#99ff99" meeting="false" start="2018-12-15" duration="1" complete="0" expand="true">
+                        <notes><![CDATA[Use the weapon attack method]]></notes>
+                    </task>
+                    <task id="141" name="Double Jump" color="#99ff99" meeting="false" start="2018-12-15" duration="1" complete="0" expand="true">
+                        <notes><![CDATA[jump twice before touching the floor]]></notes>
+                    </task>
+                    <task id="106" name="Throw" color="#99ff99" meeting="false" start="2018-12-15" duration="1" complete="0" expand="true">
+                        <notes><![CDATA[Co-op method that allows one player throw another player across a distance that cannot be jumped (can be performed anytime)]]></notes>
+                    </task>
+                    <task id="108" name="Catch" color="#99ff99" meeting="false" start="2018-12-15" duration="1" complete="0" expand="true">
+                        <notes><![CDATA[Co-op method that allows one player to help another player get over a ledge (can only be performed over a cliff)]]></notes>
+                    </task>
+                </task>
+                <task id="109" name="Enemy Methods" color="#00cc33" meeting="false" start="2018-12-16" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[List of actions the anemy can perform]]></notes>
+                    <task id="113" name="Attack" color="#99ff99" meeting="false" start="2018-12-16" duration="1" complete="0" expand="true">
+                        <notes><![CDATA[Use the weapon attack method.]]></notes>
+                    </task>
+                </task>
+                <task id="142" name="Weapon Methods" color="#00cc33" meeting="false" start="2018-12-16" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[List of things the weapons can perform]]></notes>
+                    <task id="155" name="Fire" color="#99ff99" meeting="false" start="2018-12-16" duration="1" complete="0" expand="true">
+                        <notes><![CDATA[Use the weapon (different for each weapon)]]></notes>
+                    </task>
+                </task>
+                <task id="144" name="Collectable Methods" color="#00cc33" meeting="false" start="2018-12-16" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[What actions can be performed by collectables]]></notes>
+                </task>
+                <task id="146" name="Block Methods" color="#00cc33" meeting="false" start="2018-12-16" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[What actions can be performed by blocks]]></notes>
+                    <task id="165" name="Ability" color="#99ff99" meeting="false" start="2018-12-16" duration="1" complete="0" expand="true">
+                        <notes><![CDATA[Each block can use its unique ability]]></notes>
+                    </task>
+                </task>
+            </task>
+            <task id="6" name="Identify Data Structures" color="#660066" meeting="false" start="2018-12-17" duration="1" complete="0" expand="true">
+                <notes><![CDATA[List of data structures that will be used to organixe the data in the program]]></notes>
+                <task id="248" name="Map" color="#ff66ff" meeting="false" start="2018-12-17" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[A 2-D array holding collectables and blocks that make up the map]]></notes>
+                </task>
+                <task id="250" name="Characters" color="#ff66ff" meeting="false" start="2018-12-17" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[A 2-D array holding players and enemies and weapons that make up the characters.]]></notes>
+                </task>
+            </task>
+            <task id="7" name="Functionality Sketches" color="#cc6600" meeting="false" start="2018-12-17" duration="1" complete="0" expand="true"/>
+        </task>
+        <task id="251" name="Start Coding" color="#000000" meeting="false" start="2018-12-18" duration="35" complete="0" priority="4" expand="true">
+            <notes><![CDATA[Start Coding.]]></notes>
+            <task id="283" name="Create Classes" color="#cccccc" meeting="false" start="2018-12-18" duration="2" complete="0" expand="true">
+                <notes><![CDATA[Creating all the classes for all the objects we are going to have in the game]]></notes>
+                <depend id="309" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="309" name="Create Basic Graphics" color="#cccccc" meeting="false" start="2018-12-20" duration="4" complete="0" expand="true">
+                <notes><![CDATA[Making the basic graphics just so we can get the actual coding started and how the game is going to look]]></notes>
+                <depend id="310" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="310" name="Create Map" color="#cccccc" meeting="false" start="2018-12-24" duration="1" complete="0" expand="true">
+                <notes><![CDATA[Making 1 of the levels in the game]]></notes>
+                <depend id="286" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="286" name="Create Movement Interface" color="#cccccc" meeting="false" start="2018-12-25" duration="1" complete="0" expand="true">
+                <notes><![CDATA[Creating the Movement Interface and putting them in each class that can move.]]></notes>
+                <depend id="320" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="320" name="Create Player and Enemy Methods" color="#cccccc" meeting="false" start="2018-12-26" duration="4" complete="0" expand="true">
+                <notes><![CDATA[Creating all of the player methods and enemy methods]]></notes>
+                <depend id="290" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="290" name="Create Jumping" color="#cccccc" meeting="false" start="2018-12-30" duration="1" complete="0" expand="true">
+                <notes><![CDATA[Part of movement and creating player and enemy methods, however this is more specifically focusing on jumping because we are planning on having double jumping in the game.]]></notes>
+                <depend id="295" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="295" name="Create Movement Algorithm" color="#cccccc" meeting="false" start="2018-12-31" duration="2" complete="0" expand="true">
+                <notes><![CDATA[This algorithm is how the players will move in the game, so when __ key is pressed the player will move here. Also how the player will interact with different objects.]]></notes>
+                <depend id="302" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="302" name="Create Block Methods" color="#cccccc" meeting="false" start="2019-01-02" duration="6" complete="0" expand="true">
+                <notes><![CDATA[This is the different block methods, so if it is a slime block, the player gets slowed down, if it is a bounce block the player automatically bounces, etc.
+]]></notes>
+                <depend id="323" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="323" name="Create Collectables Methods" color="#cccccc" meeting="false" start="2019-01-08" duration="1" complete="0" expand="true">
+                <notes><![CDATA[Creating the gems and stars that the players have to collect in each level.]]></notes>
+                <depend id="308" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="308" name="Create Weapon Methods" color="#cccccc" meeting="false" start="2019-01-09" duration="4" complete="0" expand="true">
+                <notes><![CDATA[Creating the different kinds of weapons and their own fire methods]]></notes>
+                <depend id="321" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="321" name="Create Weapon Algorithm" color="#cccccc" meeting="false" start="2019-01-13" duration="2" complete="0" expand="true">
+                <notes><![CDATA[How the weapon is going to be used in the game.]]></notes>
+                <depend id="322" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="322" name="Create Advanced Graphics" color="#cccccc" meeting="false" start="2019-01-15" duration="5" complete="0" expand="true">
+                <notes><![CDATA[This is when we are going to make the graphics have more of a smooth animation and if we have time have almost everything animated.]]></notes>
+                <depend id="318" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="318" name="Fix Bugs and Finish Game" color="#cccccc" meeting="false" start="2019-01-20" duration="2" complete="0" expand="true">
+                <notes><![CDATA[Fixing any extra bugs and adding the final touches to the game.]]></notes>
+            </task>
+        </task>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <taskdisplaycolumns>
+        <displaycolumn property-id="tpd2" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd6" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd3" order="0" width="227" visible="true"/>
+        <displaycolumn property-id="tpd4" order="1" width="110" visible="true"/>
+        <displaycolumn property-id="tpd7" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd8" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd12" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd5" order="2" width="109" visible="true"/>
+        <displaycolumn property-id="tpd10" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd11" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd9" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd1" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd13" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd0" order="-1" width="75" visible="false"/>
+    </taskdisplaycolumns>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles>
+        <role id="1" name=""/>
+    </roles>
+</project>

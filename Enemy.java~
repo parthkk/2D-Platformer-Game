@@ -1,0 +1,75 @@
+import java.awt.*;
+class Enemy extends Character{
+  private int closestJ;
+  public int i,j; 
+  private boolean frozen;
+  private Image[]enemyImages;
+  Enemy(int x, int y, int width, int height){
+    super(x,y,width,height);
+    this.setY(this.getY()+25);
+    this.setMovementSpeed(8);
+    enemyImages = new Image[4];
+    for(int i = 0;i<4;i++){
+      enemyImages[i] = Toolkit.getDefaultToolkit().getImage("enemy"+ (i+1) + ".png");
+    }
+    this.setHitBox((int)this.getX()-15,(int)this.getY()+5,this.getWidth()-10,this.getHeight()-5);
+  }
+  public double findClosest(int i,int j){
+    double distance = Math.sqrt(Math.pow(this.i-i,2)+Math.pow(this.j-j,2));
+    return distance;
+  }
+  public void moveLeft(){
+    this.setDirection("left");
+    this.setX(this.getX() - this.getMovementSpeed());
+    this.setHitBox((int)this.getX()-15,(int)this.getY()+5,this.getWidth()-10,this.getHeight()-5);
+  }
+  public void moveRight(){
+    this.setDirection("right");
+    this.setX(this.getX() + this.getMovementSpeed());
+    this.setHitBox((int)this.getX()-15,(int)this.getY()+5,this.getWidth()-10,this.getHeight()-5);
+  }
+  public void attackPlayer(Player p1, Player p2){
+//    System.out.println(this.j);
+    if(this.findClosest(p1.i,p1.j)<=(this.findClosest(p2.i,p2.j))){
+      this.closestJ = p1.j;
+      //System.out.println("ONE");
+    }else{
+      this.closestJ = p2.j;
+      //System.out.println("TWO");
+    }
+//    System.out.println("I"+closestI);
+//    System.out.println("J"+closestJ);
+    if(this.j > this.closestJ){
+      this.moveLeft();
+    }else if(this.j < this.closestJ){
+      this.moveRight();
+    }
+  }
+  public void freeze(){
+    this.frozen = true;
+    this.setMovementSpeed(2);
+  }
+  public Image[] getImages(){
+    return this.enemyImages;
+  }
+  public void draw(Graphics g,Image[]images){
+    if(this.frozen){
+      if((this.getIndex()<3)&&(this.getIndex()>=2)){
+        this.setIndex(this.getIndex()+1);
+      }else{
+        this.setIndex(2);
+      }
+    }else{
+      if(this.getIndex()<1){
+        this.setIndex(this.getIndex()+1);
+      }else{
+        this.setIndex(0);
+      }
+    }   
+    g.drawImage(images[this.getIndex()],(int)Math.round(this.getX()),(int)Math.round(this.getY()),this.getWidth(),this.getHeight(),null);
+    //g.drawRect((int)Math.round(hitBox.getX()),(int)Math.round(hitBox.getY()),(int)Math.round(hitBox.getWidth()),(int)Math.round(hitBox.getHeight()));
+  }
+}
+
+
+

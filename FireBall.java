@@ -1,0 +1,31 @@
+/* Fireball.java
+ * Authors: Gordon Duan & Parth Kotecha
+ * Date: January 22, 2019
+ * Description: This is the fireball
+ */
+
+import java.awt.*;
+class FireBall extends Weapon{
+  private Image[] fireImages;
+  FireBall(int x, int y, int width, int height, String direction){
+    super(x,y,width,height, direction);
+    fireImages = new Image[8];
+    for (int k = 0; k<8; k++){
+      fireImages[k] = Toolkit.getDefaultToolkit().getImage("fireball" + k + ".png");
+    }
+  }
+  public void fire(){
+    if (getDirection().equals("right")){
+      this.setX(this.getX()+10);
+      this.hitBox.x = this.getX()-25;
+      this.hitBox.y = this.getY()+30;
+    }else{
+      this.setX(this.getX()-10);
+      this.hitBox.x = this.getX()-20;
+      this.hitBox.y = this.getY()+30;
+    }
+  }
+  public Image[] getImages(){
+    return this.fireImages;
+  }   
+}
