@@ -16,4 +16,7 @@ GAME FEATURES:
 <img src = "Enemy.gif" width = "600">
 4. Gems and Stars are added into the game to provide a point system for players to try to get the most possible points
 5. There are 8 different types of platforms/blocks you can encounter, each block has a different ability. Examples: slow player, kill player, bounce player into the air. 
+<img src = "Slime.gif" width = "600"> 
+<img src = "Bounce.gif" width = "600"> 
+<img src = "Cloud.gif" width = "600">
 
