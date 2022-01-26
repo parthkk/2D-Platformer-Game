@@ -1,5 +1,5 @@
 # 2D-Platformer-Game
-This video game was created with a partner for my final project in AP Computer Science 11.
+This video game was created with a partner using Java, Awt/Swing.
 
 The project was used to strengthen my knowledge and apply the key concepts of Object Oriented Programming.
 Key Concepts include: Encapsulation, Abstraction, Polymorphism, Inheritance.
